@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: #FAF9F6; color: #191817; font-family: 'Instrument Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    @keyframes axsHeroUp { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: none; } }
+    .axs-nav-link { position: relative; }
+    .axs-nav-link::after { content: ''; position: absolute; left: 0; bottom: -6px; height: 1.5px; width: 0; background: #2743E0; transition: width .35s cubic-bezier(.16,1,.3,1); }
+    .axs-nav-link:hover::after { width: 100%; }
+    .axs-btn-primary { transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease; }
+    .axs-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(39,67,224,0.28); }
+    .axs-visit { transition: gap .3s ease, color .3s ease; }
+    .axs-visit:hover { gap: 14px; color: #2743E0; }
+    .axs-frame { transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s ease; }
+    .axs-frame:hover { transform: translateY(-6px); box-shadow: 0 40px 80px rgba(25,24,23,0.22); }
+    @media (max-width: 860px) {
+      .axs-nav-mid { display: none !important; }
+      .axs-proj { grid-template-columns: 1fr !important; }
+      .axs-proj-meta { position: static !important; }
+      .axs-hero-h1 { font-size: 13vw !important; }
+    }
+  </style>
+</helmet>
+
+<!-- NAV -->
+<div style="position: sticky; top: 0; z-index: 100; background: rgba(250,249,246,0.82); backdrop-filter: blur(12px); border-bottom: 1px solid #E4E0D5;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 22px clamp(24px,5vw,56px); display: flex; align-items: center; justify-content: space-between;">
+    <a href="Home.dc.html" style="font-family: 'Instrument Serif', serif; font-size: 27px;">AXS <span style="font-style: italic; color: #2743E0;">Creations</span></a>
+    <div class="axs-nav-mid" style="display: flex; align-items: center; gap: 38px;">
+      <a href="Home.dc.html" class="axs-nav-link" style="font-size: 15px; color: #6B675C;">Home</a>
+      <a href="Work.dc.html" class="axs-nav-link" style="font-size: 15px; font-weight: 500;">Work</a>
+      <a href="Services.dc.html" class="axs-nav-link" style="font-size: 15px; color: #6B675C;">Services</a>
+      <a href="About.dc.html" class="axs-nav-link" style="font-size: 15px; color: #6B675C;">About</a>
+    </div>
+    <a href="Contact.dc.html" class="axs-btn-primary" style="font-size: 14.5px; font-weight: 600; color: #FAF9F6; background: #191817; padding: 12px 26px; border-radius: 999px;">Start a project</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px,9vw,110px) clamp(24px,5vw,56px) clamp(40px,6vw,64px);">
+  <div style="opacity: 0; animation: axsHeroUp .9s cubic-bezier(.16,1,.3,1) .05s forwards; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #2743E0; margin-bottom: 26px;">Selected work · 3 sites live</div>
+  <h1 class="axs-hero-h1" style="opacity: 0; animation: axsHeroUp 1s cubic-bezier(.16,1,.3,1) .16s forwards; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(2.8rem,7.5vw,6.2rem); line-height: 0.98; letter-spacing: -0.015em; max-width: 1100px;">Real businesses. Real sites. Live right now.</h1>
+  <div style="opacity: 0; animation: axsHeroUp 1s cubic-bezier(.16,1,.3,1) .3s forwards; font-size: clamp(17px,2vw,20px); line-height: 1.55; color: #55524A; max-width: 560px; margin-top: 30px;">Every project below is deployed and running. Scroll through each one right here on the page, or open it live in a new tab.</div>
+</div>
+
+<!-- PROJECT 01 -->
+<div data-reveal style="max-width: 1240px; margin: 0 auto; padding: clamp(30px,5vw,56px) clamp(24px,5vw,56px); border-top: 1px solid #D8D3C6;">
+  <div class="axs-proj" style="display: block;">
+    <div class="axs-proj-meta" style="max-width: 860px; margin-bottom: clamp(28px,3.5vw,40px);">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #2743E0; margin-bottom: 16px;">01 / 03</div>
+      <div style="font-family: 'Instrument Serif', serif; font-size: clamp(2.2rem,3.4vw,2.9rem); line-height: 1.05; margin-bottom: 18px;">Indian Student Association</div>
+      <div style="font-size: 17px; line-height: 1.6; color: #55524A; margin-bottom: 28px;">A cultural organization celebrating Indian &amp; Desi culture. We built a warm, event-forward multi-page site with home, about, events, team, and a photo gallery, all to grow their community.</div>
+      <a href="https://indianstudentassociation.vercel.app/" target="_blank" rel="noopener" class="axs-visit" style="display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #191817;">Visit live site <span>↗</span></a>
+    </div>
+    <div class="axs-frame" style="border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(25,24,23,0.14); border: 1px solid #E4E0D5; background: #fff;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #F3F1E9; border-bottom: 1px solid #E4E0D5;">
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E5877E;"></span>
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E8C56B;"></span>
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #8FC08A;"></span>
+        <span style="margin-left: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B867A; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">indianstudentassociation.vercel.app</span>
+        <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FC08A;">● LIVE</span>
+      </div>
+      <iframe src="https://indianstudentassociation.vercel.app/" title="Indian Student Association" loading="lazy" style="width: 100%; height: 720px; border: 0; display: block;"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 02 -->
+<div data-reveal style="max-width: 1240px; margin: 0 auto; padding: clamp(30px,5vw,56px) clamp(24px,5vw,56px); border-top: 1px solid #D8D3C6;">
+  <div class="axs-proj" style="display: block;">
+    <div class="axs-proj-meta" style="max-width: 860px; margin-bottom: clamp(28px,3.5vw,40px);">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #2743E0; margin-bottom: 16px;">02 / 03</div>
+      <div style="font-family: 'Instrument Serif', serif; font-size: clamp(2.2rem,3.4vw,2.9rem); line-height: 1.05; margin-bottom: 18px;">Wayzata Crochet Club</div>
+      <div style="font-size: 17px; line-height: 1.6; color: #55524A; margin-bottom: 28px;">A cozy, handmade-feeling one-pager for a high school crochet club. Soft palette, a playful gallery of their makes, and clear sign-up and donation sections, all in a single scrolling story.</div>
+      <a href="https://wayzatacrochetclub.vercel.app/" target="_blank" rel="noopener" class="axs-visit" style="display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #191817;">Visit live site <span>↗</span></a>
+    </div>
+    <div class="axs-frame" style="border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(25,24,23,0.14); border: 1px solid #E4E0D5; background: #fff;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #F3F1E9; border-bottom: 1px solid #E4E0D5;">
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E5877E;"></span>
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E8C56B;"></span>
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #8FC08A;"></span>
+        <span style="margin-left: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B867A; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">wayzatacrochetclub.vercel.app</span>
+        <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FC08A;">● LIVE</span>
+      </div>
+      <iframe src="https://wayzatacrochetclub.vercel.app/" title="Wayzata Crochet Club" loading="lazy" style="width: 100%; height: 720px; border: 0; display: block;"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 03 -->
+<div data-reveal style="max-width: 1240px; margin: 0 auto; padding: clamp(30px,5vw,56px) clamp(24px,5vw,56px); border-top: 1px solid #D8D3C6; border-bottom: 1px solid #D8D3C6;">
+  <div class="axs-proj" style="display: block;">
+    <div class="axs-proj-meta" style="max-width: 860px; margin-bottom: clamp(28px,3.5vw,40px);">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #2743E0; margin-bottom: 16px;">03 / 03</div>
+      <div style="font-family: 'Instrument Serif', serif; font-size: clamp(2.2rem,3.4vw,2.9rem); line-height: 1.05; margin-bottom: 18px;">PEAK Representation</div>
+      <div style="font-size: 17px; line-height: 1.6; color: #55524A; margin-bottom: 28px;">A sharp, professional site for a student-run talent &amp; business representation agency. Clean corporate feel across home, team, services, clients, and contact, built to win trust from local brands and talent.</div>
+      <a href="https://peak-representation-zmsx.vercel.app/" target="_blank" rel="noopener" class="axs-visit" style="display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #191817;">Visit live site <span>↗</span></a>
+    </div>
+    <div class="axs-frame" style="border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(25,24,23,0.14); border: 1px solid #E4E0D5; background: #fff;">
+      <div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #F3F1E9; border-bottom: 1px solid #E4E0D5;">
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E5877E;"></span>
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E8C56B;"></span>
+        <span style="width: 11px; height: 11px; border-radius: 50%; background: #8FC08A;"></span>
+        <span style="margin-left: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B867A; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">peak-representation-zmsx.vercel.app</span>
+        <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FC08A;">● LIVE</span>
+      </div>
+      <iframe src="https://peak-representation-zmsx.vercel.app/" title="PEAK Representation" loading="lazy" style="width: 100%; height: 720px; border: 0; display: block;"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div style="background: #191817; color: #FAF9F6;">
+  <div data-reveal style="max-width: 1240px; margin: 0 auto; padding: clamp(80px,11vw,120px) clamp(24px,5vw,56px); text-align: center;">
+    <div style="font-family: 'Instrument Serif', serif; font-size: clamp(2.6rem,6vw,4.8rem); line-height: 1.05;">Want to see your site <span style="font-style: italic; color: #7C8FFF;">here?</span></div>
+    <div style="font-size: 18px; color: #A8A49A; margin-top: 22px;">Free while we build our portfolio. We respond within 48 hours.</div>
+    <a href="Contact.dc.html" class="axs-btn-primary" style="display: inline-block; font-size: 16px; font-weight: 600; color: #191817; background: #FAF9F6; padding: 18px 44px; border-radius: 999px; margin-top: 36px;">Start a project</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="max-width: 1240px; margin: 0 auto; padding: 30px clamp(24px,5vw,56px); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+  <a href="Home.dc.html" style="font-family: 'Instrument Serif', serif; font-size: 18px;">AXS Creations</a>
+  <div style="font-size: 14px; color: #6B675C;"><a href="mailto:axs.creations.mn@gmail.com">axs.creations.mn@gmail.com</a> · <a href="https://instagram.com/creations.axs.mn" target="_blank" rel="noopener">@creations.axs.mn</a></div>
+  <div style="font-size: 14px; color: #8B867A;">Minnesota, USA</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(28px)';
+      el.style.transition = 'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    els.forEach((el) => io.observe(el));
+  }
+}
+</script>
+</body>
+</html>

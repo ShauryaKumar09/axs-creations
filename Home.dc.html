@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: #FAF9F6; color: #191817; font-family: 'Instrument Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    @keyframes axsTicker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes axsHeroUp { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: none; } }
+    .axs-nav-link { position: relative; }
+    .axs-nav-link::after { content: ''; position: absolute; left: 0; bottom: -6px; height: 1.5px; width: 0; background: #2743E0; transition: width .35s cubic-bezier(.16,1,.3,1); }
+    .axs-nav-link:hover::after { width: 100%; }
+    .axs-work-row { transition: background .4s ease, padding-left .4s cubic-bezier(.16,1,.3,1); }
+    .axs-work-row:hover { background: #F0EEE5; padding-left: 24px; }
+    .axs-work-row:hover .axs-arrow { transform: translate(6px,-6px); color: #2743E0; }
+    .axs-arrow { transition: transform .4s cubic-bezier(.16,1,.3,1); }
+    .axs-btn-primary { transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease; }
+    .axs-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(39,67,224,0.28); }
+    .axs-btn-ghost { transition: background .3s ease, color .3s ease, border-color .3s ease; }
+    .axs-btn-ghost:hover { background: #191817; color: #FAF9F6; border-color: #191817; }
+    .axs-svc { transition: transform .4s cubic-bezier(.16,1,.3,1); }
+    .axs-svc:hover { transform: translateY(-6px); }
+    .axs-cta-btn { transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease; }
+    .axs-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(0,0,0,0.3); }
+    @media (max-width: 860px) {
+      .axs-nav-mid { display: none !important; }
+      .axs-hero-h1 { font-size: 15vw !important; }
+      .axs-hero-row { flex-direction: column !important; align-items: flex-start !important; gap: 28px !important; }
+      .axs-work-cells { grid-template-columns: 44px 1fr 44px !important; }
+      .axs-work-hide { display: none !important; }
+      .axs-svc-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</helmet>
+
+<!-- NAV -->
+<div style="position: sticky; top: 0; z-index: 100; background: rgba(250,249,246,0.82); backdrop-filter: blur(12px); border-bottom: 1px solid #E4E0D5;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 22px clamp(24px,5vw,56px); display: flex; align-items: center; justify-content: space-between;">
+    <a href="Home.dc.html" style="font-family: 'Instrument Serif', serif; font-size: 27px;">AXS <span style="font-style: italic; color: #2743E0;">Creations</span></a>
+    <div class="axs-nav-mid" style="display: flex; align-items: center; gap: 38px;">
+      <a href="Home.dc.html" class="axs-nav-link" style="font-size: 15px; font-weight: 500;">Home</a>
+      <a href="Work.dc.html" class="axs-nav-link" style="font-size: 15px; color: #6B675C;">Work</a>
+      <a href="Services.dc.html" class="axs-nav-link" style="font-size: 15px; color: #6B675C;">Services</a>
+      <a href="About.dc.html" class="axs-nav-link" style="font-size: 15px; color: #6B675C;">About</a>
+    </div>
+    <a href="Contact.dc.html" class="axs-btn-primary" style="font-size: 14.5px; font-weight: 600; color: #FAF9F6; background: #191817; padding: 12px 26px; border-radius: 999px;">Start a project</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(70px,10vw,120px) clamp(24px,5vw,56px) clamp(60px,8vw,90px);">
+  <h1 class="axs-hero-h1" style="opacity: 0; animation: axsHeroUp 1s cubic-bezier(.16,1,.3,1) .16s forwards; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(3rem, 8.2vw, 7.2rem); line-height: 0.98; letter-spacing: -0.015em; max-width: 1180px;">Websites that make small businesses look big.</h1>
+  <div class="axs-hero-row" style="opacity: 0; animation: axsHeroUp 1s cubic-bezier(.16,1,.3,1) .3s forwards; display: flex; align-items: flex-end; justify-content: space-between; margin-top: clamp(36px,5vw,56px); gap: 40px;">
+    <div style="font-size: clamp(17px,2vw,20px); line-height: 1.55; color: #55524A; max-width: 480px;">Custom-designed, hand-built, and launched in about two weeks. Completely free while we grow our portfolio. <span style="font-family: 'Instrument Serif', serif; font-style: italic; color: #191817;">No catch.</span></div>
+    <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="Contact.dc.html" class="axs-btn-primary" style="font-size: 16px; font-weight: 600; color: #FAF9F6; background: #2743E0; padding: 17px 36px; border-radius: 999px; white-space: nowrap;">Get your free site</a>
+      <a href="Work.dc.html" class="axs-btn-ghost" style="font-size: 16px; font-weight: 600; color: #191817; border: 1px solid #C9C4B6; padding: 17px 36px; border-radius: 999px; white-space: nowrap;">See the work ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div style="border-top: 1px solid #E4E0D5; border-bottom: 1px solid #E4E0D5; padding: 18px 0; overflow: hidden; white-space: nowrap;">
+  <div style="display: inline-flex; animation: axsTicker 26s linear infinite; font-family: 'Instrument Serif', serif; font-size: 22px; color: #8B867A;">
+    <span style="padding: 0 22px;">Indian Student Association</span><span style="color: #2743E0;">✦</span><span style="padding: 0 22px;">Wayzata Crochet Club</span><span style="color: #2743E0;">✦</span><span style="padding: 0 22px;">PEAK Representation</span><span style="color: #2743E0;">✦</span><span style="padding: 0 22px; font-style: italic;">Your business next</span><span style="color: #2743E0;">✦</span>
+    <span style="padding: 0 22px;">Indian Student Association</span><span style="color: #2743E0;">✦</span><span style="padding: 0 22px;">Wayzata Crochet Club</span><span style="color: #2743E0;">✦</span><span style="padding: 0 22px;">PEAK Representation</span><span style="color: #2743E0;">✦</span><span style="padding: 0 22px; font-style: italic;">Your business next</span><span style="color: #2743E0;">✦</span>
+  </div>
+</div>
+
+<!-- SELECTED WORK -->
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px,9vw,96px) clamp(24px,5vw,56px);">
+  <div data-reveal style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 40px; gap: 20px; flex-wrap: wrap;">
+    <div style="font-family: 'Instrument Serif', serif; font-size: clamp(2.4rem,5vw,3.4rem);">Selected work</div>
+    <a href="Work.dc.html" style="font-size: 14px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #6B675C;">3 sites live →</a>
+  </div>
+
+  <a href="Work.dc.html" data-reveal class="axs-work-row" style="display: block; border-top: 1px solid #D8D3C6;">
+    <div class="axs-work-cells" style="display: grid; grid-template-columns: 70px 1fr 300px 90px 50px; align-items: center; padding: 32px 8px;">
+      <div style="font-size: 14px; color: #8B867A;">01</div>
+      <div style="font-family: 'Instrument Serif', serif; font-size: clamp(1.7rem,3vw,2.25rem);">Indian Student Association</div>
+      <div class="axs-work-hide" style="font-size: 15px; color: #6B675C;">Cultural organization · 6 pages</div>
+      <div class="axs-work-hide" style="font-size: 15px; color: #6B675C;">2026</div>
+      <div class="axs-arrow" style="font-size: 24px; color: #8B867A; text-align: right;">↗</div>
+    </div>
+  </a>
+  <a href="Work.dc.html" data-reveal class="axs-work-row" style="display: block; border-top: 1px solid #D8D3C6;">
+    <div class="axs-work-cells" style="display: grid; grid-template-columns: 70px 1fr 300px 90px 50px; align-items: center; padding: 32px 8px;">
+      <div style="font-size: 14px; color: #8B867A;">02</div>
+      <div style="font-family: 'Instrument Serif', serif; font-size: clamp(1.7rem,3vw,2.25rem);">Wayzata Crochet Club</div>
+      <div class="axs-work-hide" style="font-size: 15px; color: #6B675C;">Club one-pager · handmade feel</div>
+      <div class="axs-work-hide" style="font-size: 15px; color: #6B675C;">2026</div>
+      <div class="axs-arrow" style="font-size: 24px; color: #8B867A; text-align: right;">↗</div>
+    </div>
+  </a>
+  <a href="Work.dc.html" data-reveal class="axs-work-row" style="display: block; border-top: 1px solid #D8D3C6; border-bottom: 1px solid #D8D3C6;">
+    <div class="axs-work-cells" style="display: grid; grid-template-columns: 70px 1fr 300px 90px 50px; align-items: center; padding: 32px 8px;">
+      <div style="font-size: 14px; color: #8B867A;">03</div>
+      <div style="font-family: 'Instrument Serif', serif; font-size: clamp(1.7rem,3vw,2.25rem);">PEAK Representation</div>
+      <div class="axs-work-hide" style="font-size: 15px; color: #6B675C;">Talent agency · 5 pages</div>
+      <div class="axs-work-hide" style="font-size: 15px; color: #6B675C;">2026</div>
+      <div class="axs-arrow" style="font-size: 24px; color: #8B867A; text-align: right;">↗</div>
+    </div>
+  </a>
+</div>
+
+<!-- SERVICES -->
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 clamp(24px,5vw,56px) clamp(70px,9vw,100px);">
+  <div data-reveal style="font-family: 'Instrument Serif', serif; font-size: clamp(2rem,4vw,2.8rem); margin-bottom: 44px;">What you get</div>
+  <div class="axs-svc-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px;">
+    <div data-reveal class="axs-svc" style="border-top: 2px solid #191817; padding-top: 24px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #8B867A; margin-bottom: 14px;">(01)</div>
+      <div style="font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 10px;">Custom design</div>
+      <div style="font-size: 15.5px; line-height: 1.6; color: #55524A;">No templates. Every layout, color, and detail is designed from scratch around your brand and your customers.</div>
+    </div>
+    <div data-reveal class="axs-svc" style="border-top: 2px solid #191817; padding-top: 24px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #8B867A; margin-bottom: 14px;">(02)</div>
+      <div style="font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 10px;">Every device</div>
+      <div style="font-size: 15.5px; line-height: 1.6; color: #55524A;">Sharp on phones, tablets, and desktops, wherever your customers happen to find you.</div>
+    </div>
+    <div data-reveal class="axs-svc" style="border-top: 2px solid #191817; padding-top: 24px;">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #8B867A; margin-bottom: 14px;">(03)</div>
+      <div style="font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 10px;">Live in ~2 weeks</div>
+      <div style="font-size: 15.5px; line-height: 1.6; color: #55524A;">From the first conversation to launch, fast and without cutting corners.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div style="background: #191817; color: #FAF9F6;">
+  <div data-reveal style="max-width: 1240px; margin: 0 auto; padding: clamp(80px,11vw,120px) clamp(24px,5vw,56px); text-align: center;">
+    <div style="font-family: 'Instrument Serif', serif; font-size: clamp(3rem,7vw,5.4rem); line-height: 1.03;">Yours could be <span style="font-style: italic; color: #7C8FFF;">next.</span></div>
+    <div style="font-size: 18px; color: #A8A49A; margin-top: 22px;">Free while we build our portfolio. We respond within 48 hours.</div>
+    <a href="Contact.dc.html" class="axs-cta-btn" style="display: inline-block; font-size: 16px; font-weight: 600; color: #191817; background: #FAF9F6; padding: 18px 44px; border-radius: 999px; margin-top: 36px;">Start a project</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="max-width: 1240px; margin: 0 auto; padding: 30px clamp(24px,5vw,56px); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+  <a href="Home.dc.html" style="font-family: 'Instrument Serif', serif; font-size: 18px;">AXS Creations</a>
+  <div style="font-size: 14px; color: #6B675C;"><a href="mailto:axs.creations.mn@gmail.com">axs.creations.mn@gmail.com</a> · <a href="https://instagram.com/creations.axs.mn" target="_blank" rel="noopener">@creations.axs.mn</a></div>
+  <div style="font-size: 14px; color: #8B867A;">Minnesota, USA</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(28px)';
+      el.style.transition = 'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach((el) => io.observe(el));
+  }
+}
+</script>
+</body>
+</html>
