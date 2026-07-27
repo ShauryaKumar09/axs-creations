@@ -30,12 +30,16 @@
     .axs-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(39,67,224,0.28); }
     .axs-visit { transition: gap .3s ease, color .3s ease; }
     .axs-visit:hover { gap: 14px; color: #2743E0; }
-    .axs-frame { transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s ease; }
-    .axs-frame:hover { transform: translateY(-6px); box-shadow: 0 40px 80px rgba(25,24,23,0.22); }
+    .axs-row { transition: background .3s ease, padding-left .3s cubic-bezier(.16,1,.3,1); cursor: pointer; }
+    .axs-row:hover { background: #F1EEE4; padding-left: 26px !important; }
+    .axs-showcase { display: grid; grid-template-columns: 380px 1fr; gap: clamp(32px,4vw,60px); align-items: start; }
+    .axs-list { position: sticky; top: 96px; }
+    @media (max-width: 980px) {
+      .axs-showcase { grid-template-columns: 1fr; }
+      .axs-list { position: static; }
+    }
     @media (max-width: 860px) {
       .axs-nav-mid { display: none !important; }
-      .axs-proj { grid-template-columns: 1fr !important; }
-      .axs-proj-meta { position: static !important; }
       .axs-hero-h1 { font-size: 13vw !important; }
     }
   </style>
@@ -56,75 +60,57 @@
 </div>
 
 <!-- HERO -->
-<div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px,9vw,110px) clamp(24px,5vw,56px) clamp(40px,6vw,64px);">
-  <div style="opacity: 0; animation: axsHeroUp .9s cubic-bezier(.16,1,.3,1) .05s forwards; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #2743E0; margin-bottom: 26px;">Selected work · 3 sites live</div>
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px,9vw,110px) clamp(24px,5vw,56px) clamp(36px,5vw,56px);">
+  <div style="opacity: 0; animation: axsHeroUp .9s cubic-bezier(.16,1,.3,1) .05s forwards; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #2743E0; margin-bottom: 26px;">Selected work · 5 sites live</div>
   <h1 class="axs-hero-h1" style="opacity: 0; animation: axsHeroUp 1s cubic-bezier(.16,1,.3,1) .16s forwards; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(2.8rem,7.5vw,6.2rem); line-height: 0.98; letter-spacing: -0.015em; max-width: 1100px;">Real businesses. Real sites. Live right now.</h1>
-  <div style="opacity: 0; animation: axsHeroUp 1s cubic-bezier(.16,1,.3,1) .3s forwards; font-size: clamp(17px,2vw,20px); line-height: 1.55; color: #55524A; max-width: 560px; margin-top: 30px;">Every project below is deployed and running. Scroll through each one right here on the page, or open it live in a new tab.</div>
+  <div style="opacity: 0; animation: axsHeroUp 1s cubic-bezier(.16,1,.3,1) .3s forwards; font-size: clamp(17px,2vw,20px); line-height: 1.55; color: #55524A; max-width: 560px; margin-top: 30px;">Every project is deployed and running. Pick any one from the index to preview it live, right here on the page.</div>
 </div>
 
-<!-- PROJECT 01 -->
-<div data-reveal style="max-width: 1240px; margin: 0 auto; padding: clamp(30px,5vw,56px) clamp(24px,5vw,56px); border-top: 1px solid #D8D3C6;">
-  <div class="axs-proj" style="display: block;">
-    <div class="axs-proj-meta" style="max-width: 860px; margin-bottom: clamp(28px,3.5vw,40px);">
-      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #2743E0; margin-bottom: 16px;">01 / 03</div>
-      <div style="font-family: 'Instrument Serif', serif; font-size: clamp(2.2rem,3.4vw,2.9rem); line-height: 1.05; margin-bottom: 18px;">Indian Student Association</div>
-      <div style="font-size: 17px; line-height: 1.6; color: #55524A; margin-bottom: 28px;">A cultural organization celebrating Indian &amp; Desi culture. We built a warm, event-forward multi-page site with home, about, events, team, and a photo gallery, all to grow their community.</div>
-      <a href="https://indianstudentassociation.vercel.app/" target="_blank" rel="noopener" class="axs-visit" style="display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #191817;">Visit live site <span>↗</span></a>
-    </div>
-    <div class="axs-frame" style="border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(25,24,23,0.14); border: 1px solid #E4E0D5; background: #fff;">
-      <div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #F3F1E9; border-bottom: 1px solid #E4E0D5;">
-        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E5877E;"></span>
-        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E8C56B;"></span>
-        <span style="width: 11px; height: 11px; border-radius: 50%; background: #8FC08A;"></span>
-        <span style="margin-left: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B867A; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">indianstudentassociation.vercel.app</span>
-        <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FC08A;">● LIVE</span>
-      </div>
-      <iframe src="https://indianstudentassociation.vercel.app/" title="Indian Student Association" loading="lazy" style="width: 100%; height: 720px; border: 0; display: block;"></iframe>
-    </div>
-  </div>
-</div>
+<!-- SHOWCASE -->
+<div data-reveal style="max-width: 1240px; margin: 0 auto; padding: clamp(16px,3vw,32px) clamp(24px,5vw,56px) clamp(60px,8vw,100px); border-top: 1px solid #D8D3C6;">
+  <div class="axs-showcase">
 
-<!-- PROJECT 02 -->
-<div data-reveal style="max-width: 1240px; margin: 0 auto; padding: clamp(30px,5vw,56px) clamp(24px,5vw,56px); border-top: 1px solid #D8D3C6;">
-  <div class="axs-proj" style="display: block;">
-    <div class="axs-proj-meta" style="max-width: 860px; margin-bottom: clamp(28px,3.5vw,40px);">
-      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #2743E0; margin-bottom: 16px;">02 / 03</div>
-      <div style="font-family: 'Instrument Serif', serif; font-size: clamp(2.2rem,3.4vw,2.9rem); line-height: 1.05; margin-bottom: 18px;">Wayzata Crochet Club</div>
-      <div style="font-size: 17px; line-height: 1.6; color: #55524A; margin-bottom: 28px;">A cozy, handmade-feeling one-pager for a high school crochet club. Soft palette, a playful gallery of their makes, and clear sign-up and donation sections, all in a single scrolling story.</div>
-      <a href="https://wayzatacrochetclub.vercel.app/" target="_blank" rel="noopener" class="axs-visit" style="display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #191817;">Visit live site <span>↗</span></a>
-    </div>
-    <div class="axs-frame" style="border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(25,24,23,0.14); border: 1px solid #E4E0D5; background: #fff;">
-      <div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #F3F1E9; border-bottom: 1px solid #E4E0D5;">
-        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E5877E;"></span>
-        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E8C56B;"></span>
-        <span style="width: 11px; height: 11px; border-radius: 50%; background: #8FC08A;"></span>
-        <span style="margin-left: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B867A; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">wayzatacrochetclub.vercel.app</span>
-        <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FC08A;">● LIVE</span>
+    <!-- INDEX -->
+    <div class="axs-list">
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #8B867A; padding: 0 8px 14px;">The index</div>
+      <div style="border-top: 1px solid #E4E0D5;">
+        <sc-for list="{{ rows }}" as="row" hint-placeholder-count="5">
+          <div class="axs-row" onClick="{{ row.onSelect }}" style="position: relative; display: grid; grid-template-columns: 40px 1fr auto; align-items: center; gap: 10px; padding: 20px 8px; border-bottom: 1px solid #E4E0D5;">
+            <sc-if value="{{ row.active }}" hint-placeholder-val="{{ true }}">
+              <span style="position: absolute; left: 0; top: 12px; bottom: 12px; width: 3px; border-radius: 3px; background: #2743E0;"></span>
+            </sc-if>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #2743E0;">{{ row.n }}</div>
+            <div>
+              <div style="font-family: 'Instrument Serif', serif; font-size: 1.35rem; line-height: 1.1;">{{ row.name }}</div>
+              <div style="font-size: 13px; color: #8B867A; margin-top: 3px;">{{ row.cat }}</div>
+            </div>
+            <sc-if value="{{ row.active }}" hint-placeholder-val="{{ true }}">
+              <span style="font-size: 13px; color: #2743E0;">●</span>
+            </sc-if>
+          </div>
+        </sc-for>
       </div>
-      <iframe src="https://wayzatacrochetclub.vercel.app/" title="Wayzata Crochet Club" loading="lazy" style="width: 100%; height: 720px; border: 0; display: block;"></iframe>
     </div>
-  </div>
-</div>
 
-<!-- PROJECT 03 -->
-<div data-reveal style="max-width: 1240px; margin: 0 auto; padding: clamp(30px,5vw,56px) clamp(24px,5vw,56px); border-top: 1px solid #D8D3C6; border-bottom: 1px solid #D8D3C6;">
-  <div class="axs-proj" style="display: block;">
-    <div class="axs-proj-meta" style="max-width: 860px; margin-bottom: clamp(28px,3.5vw,40px);">
-      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #2743E0; margin-bottom: 16px;">03 / 03</div>
-      <div style="font-family: 'Instrument Serif', serif; font-size: clamp(2.2rem,3.4vw,2.9rem); line-height: 1.05; margin-bottom: 18px;">PEAK Representation</div>
-      <div style="font-size: 17px; line-height: 1.6; color: #55524A; margin-bottom: 28px;">A sharp, professional site for a student-run talent &amp; business representation agency. Clean corporate feel across home, team, services, clients, and contact, built to win trust from local brands and talent.</div>
-      <a href="https://peak-representation-zmsx.vercel.app/" target="_blank" rel="noopener" class="axs-visit" style="display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #191817;">Visit live site <span>↗</span></a>
-    </div>
-    <div class="axs-frame" style="border-radius: 12px; overflow: hidden; box-shadow: 0 24px 60px rgba(25,24,23,0.14); border: 1px solid #E4E0D5; background: #fff;">
-      <div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #F3F1E9; border-bottom: 1px solid #E4E0D5;">
-        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E5877E;"></span>
-        <span style="width: 11px; height: 11px; border-radius: 50%; background: #E8C56B;"></span>
-        <span style="width: 11px; height: 11px; border-radius: 50%; background: #8FC08A;"></span>
-        <span style="margin-left: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B867A; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">peak-representation-zmsx.vercel.app</span>
-        <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FC08A;">● LIVE</span>
+    <!-- ACTIVE PREVIEW -->
+    <div>
+      <div style="max-width: 720px; margin-bottom: clamp(24px,3vw,32px);">
+        <div style="font-family: 'Instrument Serif', serif; font-size: clamp(2rem,3.4vw,2.9rem); line-height: 1.05; margin-bottom: 16px;">{{ cur.name }}</div>
+        <div style="font-size: 17px; line-height: 1.6; color: #55524A; margin-bottom: 24px;">{{ cur.desc }}</div>
+        <a href="{{ cur.url }}" target="_blank" rel="noopener" class="axs-visit" style="display: inline-flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600; color: #191817;">Visit live site <span>↗</span></a>
       </div>
-      <iframe src="https://peak-representation-zmsx.vercel.app/" title="PEAK Representation" loading="lazy" style="width: 100%; height: 720px; border: 0; display: block;"></iframe>
+      <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 30px 70px rgba(25,24,23,0.16); border: 1px solid #E4E0D5; background: #fff;">
+        <div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #F3F1E9; border-bottom: 1px solid #E4E0D5;">
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: #E5877E;"></span>
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: #E8C56B;"></span>
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: #8FC08A;"></span>
+          <span style="margin-left: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B867A; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ cur.host }}</span>
+          <span style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8FC08A;">● LIVE</span>
+        </div>
+        <iframe src="{{ cur.url }}" title="{{ cur.name }}" loading="lazy" style="width: 100%; height: 660px; border: 0; display: block;"></iframe>
+      </div>
     </div>
+
   </div>
 </div>
 
@@ -146,6 +132,28 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  state = { active: 0 };
+
+  projects() {
+    return [
+      { n: '01', name: 'South Asian Student Association', cat: 'Cultural org · events-forward', host: 'sasawebsite.vercel.app', url: 'https://sasawebsite.vercel.app/', desc: 'A Minnesota cultural community built around its signature Desi Prom. We designed a warm, celebratory site with home, events, board, and get-involved pages to grow membership and spotlight what is next.' },
+      { n: '02', name: 'Indian Student Association', cat: 'Cultural org · 6 pages', host: 'indianstudentassociation.vercel.app', url: 'https://indianstudentassociation.vercel.app/', desc: 'A cultural organization celebrating Indian and Desi culture. We built a warm, event-forward multi-page site with home, about, events, team, and a photo gallery, all to grow their community.' },
+      { n: '03', name: 'Wayzata Crochet Club', cat: 'Club one-pager · handmade feel', host: 'wayzatacrochetclub.vercel.app', url: 'https://wayzatacrochetclub.vercel.app/', desc: 'A cozy, handmade-feeling one-pager for a high school crochet club. Soft palette, a playful gallery of their makes, and clear sign-up and donation sections, all in a single scrolling story.' },
+      { n: '04', name: 'PEAK Representation', cat: 'Talent agency · 5 pages', host: 'peak-representation-zmsx.vercel.app', url: 'https://peak-representation-zmsx.vercel.app/', desc: 'A sharp, professional site for a student-run talent and business representation agency. Clean corporate feel across home, team, services, clients, and contact, built to win trust from local brands and talent.' },
+      { n: '05', name: 'MET Excellence', cat: 'Nonprofit tutoring · multi-page', host: 'metexcellence.org', url: 'https://www.metexcellence.org/', desc: 'A registered Minnesota nonprofit offering free tutoring, chess classes, and enrichment. We built a bright, trust-building multi-page site with classes, team, FAQ, resources, and donation flows to help them recruit tutors and reach families.' },
+    ];
+  }
+
+  renderVals() {
+    const projects = this.projects();
+    const active = this.state.active;
+    const rows = projects.map((p, i) => ({
+      n: p.n, name: p.name, cat: p.cat, active: i === active,
+      onSelect: () => this.setState({ active: i }),
+    }));
+    return { rows, cur: projects[active] };
+  }
+
   componentDidMount() {
     const els = Array.from(document.querySelectorAll('[data-reveal]'));
     els.forEach((el) => {
